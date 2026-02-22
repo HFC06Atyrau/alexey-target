@@ -1,0 +1,214 @@
+.cases {
+    padding: 120px 5%;
+    background: #12121a;
+    position: relative;
+    overflow: hidden;
+}
+
+.casesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.caseCard {
+    background: #1a1a24;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.caseCard:hover {
+    transform: translateY(-10px);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.caseIcon {
+    position: absolute;
+    top: 20px;
+    /* Было -25px, теперь иконка внутри карточки */
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(145deg, #1e1e2a 0%, #0f0f14 100%);
+    border: 1.5px solid rgba(212, 175, 55, 0.4);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(212, 175, 55, 0.1);
+    z-index: 2;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.caseCard:hover .caseIcon {
+    transform: translateY(-5px) rotate(5deg);
+    border-color: rgba(212, 175, 55, 0.8);
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(212, 175, 55, 0.3);
+}
+
+.caseHeader {
+    padding: 30px;
+    padding-right: 80px;
+    /* Добавляем отступ справа для иконки */
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, transparent 100%);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.caseCategory {
+    color: #d4af37;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.caseTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.caseLocation {
+    color: #6b6b7b;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.caseMetrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+
+.metric {
+    text-align: center;
+    padding: 20px;
+    background: rgba(10, 10, 15, 0.5);
+    border-radius: 16px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.metricValue {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #d4af37;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.metricLabel {
+    font-size: 0.85rem;
+    color: #6b6b7b;
+}
+
+.caseFooter {
+    padding: 0 30px 30px;
+}
+
+.caseDescription {
+    color: #a0a0b0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.caseTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: rgba(212, 175, 55, 0.1);
+    color: #d4af37;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .cases {
+        padding: 50px 16px;
+    }
+
+    .casesGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .caseCard {
+        border-radius: 16px;
+    }
+
+    .caseHeader {
+        padding: 20px;
+        padding-right: 70px;
+    }
+
+    .caseIcon {
+        width: 40px;
+        height: 40px;
+        top: 16px;
+        right: 16px;
+    }
+
+    .caseCategory {
+        font-size: 0.75rem;
+    }
+
+    .caseTitle {
+        font-size: 1.1rem;
+    }
+
+    .caseLocation {
+        font-size: 0.8rem;
+    }
+
+    .caseMetrics {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 16px;
+    }
+
+    .metric {
+        padding: 14px 10px;
+        border-radius: 12px;
+    }
+
+    .metricValue {
+        font-size: 1.4rem;
+    }
+
+    .metricLabel {
+        font-size: 0.75rem;
+    }
+
+    .caseFooter {
+        padding: 0 20px 20px;
+    }
+
+    .caseDescription {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+}

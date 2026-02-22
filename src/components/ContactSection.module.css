@@ -1,0 +1,125 @@
+.contact {
+    padding: 120px 5%;
+    background: #0a0a0f;
+    position: relative;
+    overflow: hidden;
+}
+
+.contactContent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contactHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contactTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 20px;
+}
+
+.contactSubtitle {
+    color: #a0a0b0;
+    font-size: 1.2rem;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contactButtonsWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contactButtonsText {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.contactButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 40px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.contactBtn.whatsapp {
+    color: #25D366;
+    border-color: rgba(37, 211, 102, 0.3);
+}
+
+.contactBtn.whatsapp:hover {
+    background: rgba(37, 211, 102, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.2);
+}
+
+.contactBtn.telegram {
+    color: #0088cc;
+    border-color: rgba(0, 136, 204, 0.3);
+}
+
+.contactBtn.telegram:hover {
+    background: rgba(0, 136, 204, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 136, 204, 0.2);
+}
+
+@media (max-width: 968px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contactHeader {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .contactTitle {
+        font-size: 2rem;
+    }
+
+    .contactSubtitle {
+        font-size: 1rem;
+    }
+
+    .contactButtonsText {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .contactBtn {
+        padding: 16px 20px;
+        font-size: 1rem;
+    }
+}
